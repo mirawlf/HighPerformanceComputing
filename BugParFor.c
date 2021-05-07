@@ -10,6 +10,10 @@ int main (int argc, char *argv[])
     int i, tid;
     float a[N], b[N], c[N];
 
+    omp_set_num_threads(20);
+    printf("Current number of threads is %d\n",omp_get_max_threads());
+    omp_set_dynamic(0);
+
     for (i = 0; i < N; ++i)
     {
         a[i] = b[i] = (float)i;
