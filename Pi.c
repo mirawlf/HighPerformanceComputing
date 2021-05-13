@@ -11,11 +11,11 @@ int main()
 
     step = 1. / (double)N;
     start = omp_get_wtime();   
-    #pragma omp parallel for private(x)
+    #pragma omp parallel for private(x) reduction(+:sum) //takes 0.0104 seconds
     for (int i = 0; i < N; ++i)
     {
         x = (i + 0.5) * step;
-#pragma omp critical
+#pragma omp critical //without reduction 0.0054 seconds needed
         sum += 4.0 / (1. + x * x);
     }
 
