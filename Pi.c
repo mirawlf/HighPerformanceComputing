@@ -16,6 +16,7 @@ int main()
     {
         x = (i + 0.5) * step;
 #pragma omp critical //without reduction 0.0054 seconds needed
+
         sum += 4.0 / (1. + x * x);
     }
 
