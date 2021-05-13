@@ -11,10 +11,11 @@ int main()
 
     step = 1. / (double)N;
     start = omp_get_wtime();   
-    #pragma omp for
+    #pragma omp parallel for private(x)
     for (int i = 0; i < N; ++i)
     {
         x = (i + 0.5) * step;
+#pragma omp critical
         sum += 4.0 / (1. + x * x);
     }
 
