@@ -17,9 +17,6 @@ void zero_init_matrix(double ** matrix, size_t N)
 void rand_init_matrix(double ** matrix, size_t N)
 {
     unsigned int seed = rand();
-    //printf("seed %d\n", seed);
-   // srand(time(NULL));
-  
 
     for (int i = 0; i < N; i++)
     {
@@ -28,8 +25,6 @@ void rand_init_matrix(double ** matrix, size_t N)
             matrix[i][j] = rand_r(&seed) / (double)RAND_MAX;
         }
     }
-    //printf("matrix %f %f %f %f\n", matrix[0][0], matrix[0][1], matrix[1][0],\
-     //   matrix[1][1]);
 }
 
 double ** malloc_matrix(size_t N)
@@ -73,7 +68,6 @@ int main()
     C = malloc_matrix(N);    
 
     rand_init_matrix(A, N);
-    //printf("A: %f %f %f %f\n", A[0][0], A[0][1], A[1][0], A[1][1]);
     rand_init_matrix(B, N);
     zero_init_matrix(C, N);
 
@@ -87,15 +81,13 @@ int main()
         for (k = 0; k<N; k++)
         {
           C[i][j] += A[i][k] * B[k][j];
-          //printf(A[i, k]);
-          //printf("A = %f B = %f C = %f\n", A[i][k], B[k][j], C[i][j]);
         }
       }
     }
 
 
     end = omp_get_wtime();
-    printf("Time elapsed (ijk): %f seconds.\n", (double)(end - start) / CLOCKS_PER_SEC);
+    printf("Time elapsed (ijk): %f seconds.\n", (double)(end - start));
 
     free_matrix(A, N);
     free_matrix(B, N);
