@@ -38,7 +38,7 @@ int main()
   double *X = new double[N];
   double *tmp = new double[N];
 
-  int start = omp_get_wtime();
+  double start = omp_get_wtime();
   //creating coefficient matrix A
   for (int i = 0; i < N; i++)
     A[i] = new double[N];
@@ -128,6 +128,14 @@ int main()
 
     n++;
   }
+
+  for (int i = 0; i < N; i++)
+    delete A[i];
+
+  delete A;
+  delete X;
+  delete Y;
+  delete tmp;
 
   double end = omp_get_wtime();
   printf("Elapsed time: %f ms",(end - start)*1000);
