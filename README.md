@@ -15,5 +15,7 @@ Homeworks from High Performance Computing and Modern Architectures course
 
 ***Pi.c*** - parallel calculation of Pi value with the help of OpenMP
 
+***Car.cpp*** - code for shifting an image (example: car.ppm -> new_car.ppm)
+
 
 
