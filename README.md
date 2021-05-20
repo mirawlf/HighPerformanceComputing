@@ -26,4 +26,10 @@ Homeworks from High Performance Computing and Modern Architectures course at Sko
 
   All names are generated randomly. Here are a couple of dependences conserning the size of the message aka name of the rank. All runnings were done with 6 iterations and 8 processors.
   
-  ![Dependences](https://github.com/samymone/HighPerformanceComputing/blob/master/table.png width="400" height="790")
+  ![Dependences](https://github.com/samymone/HighPerformanceComputing/blob/master/table.png)
+  
+  ![Strange time plot](https://github.com/samymone/HighPerformanceComputing/blob/master/time.png)
+  
+  ![Too primitime bandwith plot](https://github.com/samymone/HighPerformanceComputing/blob/master/bandwith.png)
+  
+  
