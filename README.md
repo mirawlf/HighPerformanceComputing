@@ -22,8 +22,8 @@ Homeworks from High Performance Computing and Modern Architectures course at Sko
 **MPI part**
 
 ------------
-***PingPongOneItem.cpp***: there are N peaople with particular, but random names and they are get acquainted to each other. Different ranks are different people. First starts rank 0. It chooses randomly next rank and passes its name to this next one. One can't choose itself and the rank that was already got acquainted to someone else. There are particular number of ranks and number of iterations during which all acquaintanceships are done. When all iterations are done but unused ranks remained ar vice versa, MPI_ABORT is called. All acquaintances are controlled via *acquaintances* matrix, number of rest iterations and ranks are sent through all processes.
+***PingPongOneItem.cpp:*** there are N peaople with particular, but random names and they are get acquainted to each other. Different ranks are different people. First starts rank 0. It chooses randomly next rank and passes its name to this next one. One can't choose itself and the rank that was already got acquainted to someone else. There are particular number of ranks and number of iterations during which all acquaintanceships are done. When all iterations are done but unused ranks remained ar vice versa, MPI_ABORT is called. All acquaintances are controlled via *acquaintances* matrix, number of rest iterations and ranks are sent through all processes.
 
   All names are generated randomly. Here are a couple of dependences conserning the size of the message aka name of the rank. All runnings were done with 6 iterations and 8 processors.
   
-  ![Dependences](https://github.com/samymone/HighPerformanceComputing/blob/master/table.png)
+  ![Dependences](https://github.com/samymone/HighPerformanceComputing/blob/master/table.png width="400" height="790")
