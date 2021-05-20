@@ -29,7 +29,7 @@ Homeworks from High Performance Computing and Modern Architectures course at Sko
   ***Table with all data***
   
   <br>
-    <img height="300" align="center" src="https://github.com/samymone/HighPerformanceComputing/blob/master/table.png/>
+    <img height="300" align="center" src="https://github.com/samymone/HighPerformanceComputing/blob/master/table.png/">
   </br>
   
   ***Strange time plot and too primitime bandwith plot***
