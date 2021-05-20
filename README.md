@@ -36,6 +36,7 @@ Homeworks from High Performance Computing and Modern Architectures course at Sko
     
   <br>
     <img height="300" align="right" src="https://github.com/samymone/HighPerformanceComputing/blob/master/time.png" />
+    <img height="300" align="right" src="https://github.com/samymone/HighPerformanceComputing/blob/master/bandwith.png" />
   </br>
  
   <br>
