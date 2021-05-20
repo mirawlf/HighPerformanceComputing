@@ -28,14 +28,18 @@ Homeworks from High Performance Computing and Modern Architectures course at Sko
   
   ***Table with all data***
   
-  ![Dependences](https://github.com/samymone/HighPerformanceComputing/blob/master/table.png)
+  <br>
+    <img height="300" align="center" src="https://github.com/samymone/HighPerformanceComputing/blob/master/table.png/>
+  </br>
   
-  ***Strange time plot***
-  ![Strange time plot](https://github.com/samymone/HighPerformanceComputing/blob/master/time.png)
-  
-  ***Too primitime bandwith plot***
-  <br align="right">
-    <img height="300" src="https://github.com/samymone/HighPerformanceComputing/blob/master/bandwith.png" />
+  ***Strange time plot and too primitime bandwith plot***
+    
+  <br>
+    <img height="300" align="right" src="https://github.com/samymone/HighPerformanceComputing/blob/master/time.png" />
+  </br>
+ 
+  <br>
+    <img height="300" align="right" src="https://github.com/samymone/HighPerformanceComputing/blob/master/bandwith.png" />
   </br>
   
   
