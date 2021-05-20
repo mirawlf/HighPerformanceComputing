@@ -35,6 +35,6 @@ Homeworks from High Performance Computing and Modern Architectures course at Sko
   ***Strange time plot (right) and too primitime bandwith plot (left)***
     
   <br>
-    <img height="300" align="right" src="https://github.com/samymone/HighPerformanceComputing/blob/master/time.png" />
-    <img height="300" align="left" src="https://github.com/samymone/HighPerformanceComputing/blob/master/bandwith.png" />
+    <img height="250" align="left" src="https://github.com/samymone/HighPerformanceComputing/blob/master/time.png" />
+    <img height="250" align="right" src="https://github.com/samymone/HighPerformanceComputing/blob/master/bandwith.png" />
   </br>
