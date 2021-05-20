@@ -5,8 +5,7 @@
 #include <unistd.h>
 #include <string.h>
 
-const int NUM_PASSES = 6;
-bool started = false;
+const int NUM_PASSES = 5;
 
 int get_random_process(int max)
 {
@@ -124,13 +123,14 @@ int main(int ac, char **av)
     if (remained_processors == 0)
     {
       printf("Processors are over\n");
+      double end  = MPI_Wtime();
+      printf("Elapsed time: %f ms\n", end - start);
       MPI_Abort(MPI_COMM_WORLD, MPI_ERR_OTHER);
     }
  
     for (int i = 0; i < psize; i++)
       for (int j = 0; j < psize; j++)
         MPI_Recv(&acquaintances[i][j], 1, MPI_INT, status.MPI_SOURCE, 10, MPI_COMM_WORLD, &status);
-    printf("GOT\n");
 
     for (int i = 0; i < psize; i++)
       MPI_Recv(names[i], 6, MPI_CHAR, status.MPI_SOURCE, 19, MPI_COMM_WORLD, &status);
@@ -146,9 +146,6 @@ int main(int ac, char **av)
       while ((next_process = get_random_process(psize)) == prank or next_process== 0 or next_process >= psize or acquaintances[prank][next_process] or rank_was_used(acquaintances, next_process, psize))
         next_process = get_random_process(psize-1);
       
-      printf("Acq %d\n",acquaintances[prank][status.MPI_SOURCE]);
-      printf("next proc= %d name = %s\n", next_process, names[prank]);
-
       MPI_Ssend(names[prank], 6, MPI_CHAR, next_process, 9, MPI_COMM_WORLD);
       MPI_Ssend(&num_iter, 1, MPI_INT, next_process, 25, MPI_COMM_WORLD);
       MPI_Ssend(&remained_processors, 2, MPI_INT, next_process, 98, MPI_COMM_WORLD);
@@ -157,7 +154,7 @@ int main(int ac, char **av)
           MPI_Ssend(&acquaintances[i][j], 1, MPI_INT, next_process, 10, MPI_COMM_WORLD);
       for (int i = 0; i < psize; i++)
         MPI_Ssend(names[i], 6, MPI_CHAR, next_process, 19, MPI_COMM_WORLD);
-      delete[] buf;
+      delete[]buf;
 
     }
     else if (num_iter == 0)
