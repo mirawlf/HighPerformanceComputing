@@ -35,10 +35,9 @@ Homeworks from High Performance Computing and Modern Architectures course at Sko
   ***Strange time plot (right) and too primitime bandwith plot (left)***
     
   <br>
-    <img height="250" align="left" src="https://github.com/samymone/HighPerformanceComputing/blob/master/time.png" />
-    <img height="250" align="right" src="https://github.com/samymone/HighPerformanceComputing/blob/master/bandwith.png" />
+    <img height="270" align="left" src="https://github.com/samymone/HighPerformanceComputing/blob/master/time.png" />
+    <img height="270" align="center" src="https://github.com/samymone/HighPerformanceComputing/blob/master/bandwith.png" />
   </br>
-  
-  
-  
+
+
 ***PingPongArray.cpp:*** in common similar to the previous task, but now not just last one name is sent to the next process, but an array of all previous names is sent
