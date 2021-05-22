@@ -39,4 +39,6 @@ Homeworks from High Performance Computing and Modern Architectures course at Sko
     <img height="250" align="right" src="https://github.com/samymone/HighPerformanceComputing/blob/master/bandwith.png" />
   </br>
   
+  
+  
 ***PingPongArray.cpp:*** in common similar to the previous task, but now not just last one name is sent to the next process, but an array of all previous names is sent
