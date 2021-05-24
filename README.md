@@ -41,3 +41,26 @@ Homeworks from High Performance Computing and Modern Architectures course at Sko
 
 
 ***PingPongArray.cpp:*** in common similar to the previous task, but now not just last one name is sent to the next process, but an array of all previous names is sent
+
+***CellularAutomataConst.cpp:*** 1D array of zeros and ones is divided into number of ranks parts. In this case constant boundary conditions are implemented. This means that each left and right parts communicates with respectively last right element of previous rank's part of array or first left element of next one (exchange ghosts). Staying on the particular element, taking into accout its neighbours, programm changes the value of this element with the help of some rule. My *rule* consists of the following: we have 3 random numbers that makes a binary number. This number is translated from binary to decimal in the order in which they are located. In case this number is even, current element of array becomes 0, otherwise 1. This program is developed for even number of elements in initial array, multiple of even number of processes (e.x. 2/4/8 proc for 8 elems in array).
+
+  <br>
+    <img height="50" align="center" src="https://github.com/samymone/HighPerformanceComputing/blob/master/Constant.png">
+  </br>
+  <br>
+    <img height="50" align="center" src="https://github.com/samymone/HighPerformanceComputing/blob/master/Constant_res.png">
+  </br>
+
+***CellularAutomataPeriodic.cpp:*** almost the same as the first, but now all calculations are done within the particular rank. So, the are no communications between different ranks. Rule is the same. Requirements for array length and number of processers are also the same.
+
+  <br>
+    <img height="50" align="center" src="https://github.com/samymone/HighPerformanceComputing/blob/master/Periodic.png">
+  </br>
+  <br>
+    <img height="50" align="center" src="https://github.com/samymone/HighPerformanceComputing/blob/master/Periodic_res.png">
+  </br>
+
+
+
+
+
